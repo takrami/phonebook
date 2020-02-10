@@ -39,15 +39,19 @@ export default function ElevateAppBar(props) {
       <ElevationScroll {...props}>
         <AppBar>
           <Toolbar>
-            <Typography variant="h6">Phone Number Notebook</Typography>
+            <Typography variant="h6">
+              <Link to={"/"}>
+                Phone Book
+              </Link>
+            </Typography>
             <ul className="main-nav">
-              <li className="">
-                <Link to="/" className="">
+              <li>
+                <Link to="/">
                   Contacts List
                 </Link>
               </li>
               <li className="">
-                <Link to="/add" className="">
+                <Link to="/add">
                   Add Contact
                 </Link>
               </li>

@@ -75,11 +75,11 @@ class AddContact extends Component {
           const { dispatch } = value;
           return(
 
-            <div className="card mb-3">
-              <div className="card-header">
+            <div className="form">
+              <div className="form-header">
                 Add Contact
               </div>
-              <div className="card-body">
+              <div className="form-body">
                 <form onSubmit={this.onSubmit.bind(this, dispatch)}>
                   <TextInputGroup 
                     label="Name"
@@ -112,7 +112,7 @@ class AddContact extends Component {
                   <input 
                     type="submit"
                     value="Add Contact"
-                    className="btn btn-block btn-light"
+                    className="btn"
                   />
 
                 </form>

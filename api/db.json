@@ -1,12 +1,6 @@
 {
   "contacts": [
     {
-      "name": "Ati",
-      "email": "ati@gmail.com",
-      "phone": "5456646",
-      "id": "1"
-    },
-    {
       "id": "2",
       "name": "Hedi",
       "email": "hedi@gmail.com",
@@ -17,6 +11,12 @@
       "name": "Karen",
       "email": "karen@gmail.com",
       "phone": "5456646"
+    },
+    {
+      "id": "38fcbbf6-dcc2-48eb-a4bf-9eaf3a519baf",
+      "name": "Ati",
+      "email": "ati@gmail.com",
+      "phone": "546848654"
     }
   ]
 }

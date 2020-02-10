@@ -33,7 +33,7 @@ class Contact extends Component {
               </Link>
               <i
                 className="fas fa-times"
-                style={{ cursor: 'pointer', float: 'right', textAlign: 'right', color: 'red'}}
+                style={{ cursor: 'pointer', float: 'right', textAlign: 'right', color: '#ff3c38'}}
                 onClick={this.onDeleteClick.bind(this, id, dispatch)}
               />
             </div>
