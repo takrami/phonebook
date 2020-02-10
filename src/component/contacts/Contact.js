@@ -1,14 +1,23 @@
 import React, { Component } from 'react';
 import PropType from 'prop-types';
 import { Consumer } from '../../context';
+import axios from 'axios';
 
 class Contact extends Component {
   state = {
 
   };
 
-  onDeleteClick = (id, dispatch) => {
-    dispatch({type:  'DELETE_CONTACT', payload: id});
+  onDeleteClick = async (id, dispatch) => {
+    try {
+      await axios
+        .delete
+        (`http://localhost:3000/contacts/${id}`);
+      dispatch({type:  'DELETE_CONTACT', payload: id})
+    }
+    catch(e) {
+      dispatch({type:  'DELETE_CONTACT', payload: id})
+    }
   };
  
   render() {

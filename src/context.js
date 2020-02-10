@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import axios from 'axios';
 
 const Context = React.createContext();
 
@@ -32,30 +33,19 @@ const reducer = (state, action) => {
 
 export class Provider extends Component {
   state = {
-    contacts: [
-      {
-        id: 1,
-        name: 'Ati',
-        phone: '644546565',
-        email: 'ati@gmail.com'
-      },
-      {
-        id: 2,
-        name: 'Atfsi',
-        phone: '644546565',
-        email: 'sdfd@gmail.com'
-      },
-      {
-        id: 3,
-        name: 'Ataasdsi',
-        phone: '644546565',
-        email: 'dgfds@gmail.com'
-      },
-    ],
+    contacts: [],
     dispatch: action => {
       this.setState(state => reducer(state, action))
     }
   };
+
+  async componentDidMount() {
+    const res = await axios
+      .get
+      ('http://localhost:3000/contacts');
+    
+    this.setState({contacts: res.data});
+  }
 
   render() {
     return (
