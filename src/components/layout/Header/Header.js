@@ -6,6 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import { Link } from 'react-router-dom';
+import './assets/Header.css'
 
 function ElevationScroll(props) {
   const { children, window } = props;

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Consumer } from '../../context';
-import TextInputGroup from '../layout/TextInputGroup';
+import { Consumer } from '../../../context';
+import TextInputGroup from '../../layout/TextInputGroup/TextInputGroup';
 import uuid from 'uuid';
 import axios from 'axios';
 

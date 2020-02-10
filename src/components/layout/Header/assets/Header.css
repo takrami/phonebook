@@ -1,0 +1,26 @@
+/* Start header style */
+.main-nav {
+  flex: 3;
+  text-align: right;
+}
+
+.main-nav li {
+  display: inline-block;
+  padding: 8px;
+}
+
+.main-nav li a {
+  color: #fff;
+  font-weight: bold;
+}
+
+.MuiTypography-h6 a {
+  color: #fff;
+  font-weight: bold;
+}
+
+.MuiAppBar-colorPrimary {
+  background-color: #3b5166 !important;
+}
+
+/* Enf of header style */

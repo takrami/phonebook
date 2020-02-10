@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Header from './components/layout/Header';
-import AddContact from './components/contacts/AddContact';
-import EditContact from './components/contacts/EditContact';
-import Contacts from './components/contacts/Contacts';
-import NotFound from './components/pages/NotFound';
+import Header from './components/layout/Header/Header';
+import AddContact from './components/contacts/AddContact/AddContact';
+import EditContact from './components/contacts/EditContact/EditContact';
+import Contacts from './components/contacts/Contacts/Contacts';
+import NotFound from './components/pages/NotFound/NotFound';
 import { Provider } from './context';
 import './App.css';
 

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import PropType from 'prop-types';
-import { Consumer } from '../../context';
+import { Consumer } from '../../../context';
 import axios from 'axios';
 
 class Contact extends Component {
