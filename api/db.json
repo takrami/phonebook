@@ -1,28 +1,22 @@
 {
   "contacts": [
     {
-      "id": 1,
-      "name": "fhdf",
-      "phone": "4654646",
-      "email": "ati@gmail.com"
+      "name": "Ati",
+      "email": "ati@gmail.com",
+      "phone": "5456646",
+      "id": "1"
     },
     {
-      "id": 2,
-      "name": "fhdf",
-      "phone": "4654646",
-      "email": "ati@gmail.com"
+      "id": "2",
+      "name": "Hedi",
+      "email": "hedi@gmail.com",
+      "phone": "5456646"
     },
     {
-      "id": 3,
-      "name": "fhdf",
-      "phone": "4654646",
-      "email": "ati@gmail.com"
-    },
-    {
-      "id": 4,
-      "name": "fhdf",
-      "phone": "4654646",
-      "email": "ati@gmail.com"
+      "id": "3",
+      "name": "Karen",
+      "email": "karen@gmail.com",
+      "phone": "5456646"
     }
   ]
 }

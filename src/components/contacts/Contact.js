@@ -1,23 +1,15 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import PropType from 'prop-types';
 import { Consumer } from '../../context';
 import axios from 'axios';
 
 class Contact extends Component {
-  state = {
-
-  };
-
   onDeleteClick = async (id, dispatch) => {
-    try {
       await axios
         .delete
         (`http://localhost:3000/contacts/${id}`);
-      dispatch({type:  'DELETE_CONTACT', payload: id})
-    }
-    catch(e) {
-      dispatch({type:  'DELETE_CONTACT', payload: id})
-    }
+      dispatch({type: 'DELETE_CONTACT', payload: id})
   };
  
   render() {
@@ -33,6 +25,12 @@ class Contact extends Component {
                 <li>Phone: {phone}</li>
                 <li>Email: {email}</li>
               </ul>
+              <Link to={`/edit/${id}`}>
+                <i
+                  className="fas fa-pencil-alt"
+                  style={{ cursor: 'pointer', float: 'right', textAlign: 'right', color: 'black', marginRight: '1rem'}}
+                />
+              </Link>
               <i
                 className="fas fa-times"
                 style={{ cursor: 'pointer', float: 'right', textAlign: 'right', color: 'red'}}

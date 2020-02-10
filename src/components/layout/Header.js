@@ -50,7 +50,7 @@ export default function ElevateAppBar(props) {
                 <Link to="/add" className="">
                   Add Contact
                 </Link>
-              </li>  
+              </li>
             </ul>
           </Toolbar>
         </AppBar>
