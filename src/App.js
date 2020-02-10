@@ -1,25 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Header from './component/layout/Header';
+import AddContact from './component/contacts/AddContact';
+import Contacts from './component/contacts/Contacts';
+import NotFound from './component/pages/NotFound';
+import { Provider } from './context';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider>
+      <div className="App">
+        <Router>
+          <Header />
+          <div className="wrapper">
+            <Switch>
+              <Route exact path="/" component={Contacts} />
+              <Route exact path="/contancts" component={Contacts} />
+              <Route exact path="/add" component={AddContact} />
+              <Route component={NotFound} />
+            </Switch>
+          </div>
+        </Router>
+      </div>
+    </Provider>
   );
 }
 
