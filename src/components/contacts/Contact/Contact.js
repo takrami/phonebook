@@ -6,10 +6,15 @@ import axios from 'axios';
 
 class Contact extends Component {
   onDeleteClick = async (id, dispatch) => {
+    if(window.confirm('Are you sure?')) {
+      console.log(2)
       await axios
         .delete
         (`http://localhost:3000/contacts/${id}`);
       dispatch({type: 'DELETE_CONTACT', payload: id})
+    } else {
+      console.log(3)
+    }
   };
  
   render() {
