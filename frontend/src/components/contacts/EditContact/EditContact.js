@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Consumer } from '../../../context';
 import TextInputGroup from '../../layout/TextInputGroup/TextInputGroup';
 import axios from 'axios';
-// import uuid from 'uuid';
+import { Form, FormBody, FormHeader, Button} from '../../../assets/SharedStyle/SharedStyle';
 
 class EditContact extends Component {
   state = {
@@ -89,11 +89,11 @@ class EditContact extends Component {
           const { dispatch } = value;
           return(
 
-            <div className="form">
-              <div className="form-header">
+            <Form>
+              <FormHeader>
                 Update Contact
-              </div>
-              <div className="form-body">
+              </FormHeader>
+              <FormBody>
                 <form onSubmit={this.onSubmit.bind(this, dispatch)}>
                   <TextInputGroup 
                     label="Name"
@@ -123,15 +123,15 @@ class EditContact extends Component {
                     error={errors.phone}
                   />
 
-                  <input 
+                  <Button 
                     type="submit"
                     value="Update Contact"
                     className="btn"
                   />
 
                 </form>
-              </div>
-            </div>
+              </FormBody>
+            </Form>
           )
         }}
       </Consumer>

@@ -3,6 +3,7 @@ import { Consumer } from '../../../context';
 import TextInputGroup from '../../layout/TextInputGroup/TextInputGroup';
 import uuid from 'uuid';
 import axios from 'axios';
+import { Form, FormBody, FormHeader, Button} from '../../../assets/SharedStyle/SharedStyle';
 
 class AddContact extends Component {
   state = {
@@ -75,11 +76,11 @@ class AddContact extends Component {
           const { dispatch } = value;
           return(
 
-            <div className="form">
-              <div className="form-header">
+            <Form>
+              <FormHeader>
                 Add Contact
-              </div>
-              <div className="form-body">
+              </FormHeader>
+              <FormBody>
                 <form onSubmit={this.onSubmit.bind(this, dispatch)}>
                   <TextInputGroup 
                     label="Name"
@@ -109,15 +110,15 @@ class AddContact extends Component {
                     error={errors.phone}
                   />
 
-                  <input 
+                  <Button 
                     type="submit"
                     value="Add Contact"
                     className="btn"
                   />
 
                 </form>
-              </div>
-            </div>
+              </FormBody>
+            </Form>
           )
         }}
       </Consumer>

@@ -1,13 +1,36 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import { Link } from 'react-router-dom';
-import './assets/Header.css'
 
+const BarContainer = styled.div`
+  && .MuiAppBar-colorPrimary {
+    background-color: #3b5166 !important;
+  }
+`
+const Ul = styled.ul`
+  flex: 3;
+  text-align: right;
+`
+const Li = styled.li`
+  display: inline-block;
+  padding: 8px;
+  && a {
+    color: #fff;
+    font-weight: bold;
+  }
+`
+const MyTitle = styled.div`
+  && a {
+    color: #fff;
+    font-weight: bold;
+  }
+`
 function ElevationScroll(props) {
   const { children, window } = props;
   // Note that you normally won't need to set the window ref as useScrollTrigger
@@ -38,27 +61,32 @@ export default function ElevateAppBar(props) {
     <>
       <CssBaseline />
       <ElevationScroll {...props}>
-        <AppBar>
-          <Toolbar>
-            <Typography variant="h6">
-              <Link to={"/"}>
-                Phone Book
-              </Link>
-            </Typography>
-            <ul className="main-nav">
-              <li>
-                <Link to="/">
-                  Contacts List
-                </Link>
-              </li>
-              <li className="">
-                <Link to="/add">
-                  Add Contact
-                </Link>
-              </li>
-            </ul>
-          </Toolbar>
-        </AppBar>
+        <BarContainer>
+          <AppBar>
+            <Toolbar>
+              <Typography variant="h6">
+                <MyTitle>
+                  <Link to={"/"}>
+                    Phone Book
+                  </Link>
+                </MyTitle>
+              </Typography>
+              <Ul>
+                <Li>
+                  <Link to="/">
+                    Contacts List
+                  </Link>
+                </Li>
+                <Li className="">
+                  <Link to="/add">
+                    Add Contact
+                  </Link>
+                </Li>
+              </Ul>
+            </Toolbar>
+          </AppBar>
+
+        </BarContainer>
       </ElevationScroll>
       <Toolbar />
     </>

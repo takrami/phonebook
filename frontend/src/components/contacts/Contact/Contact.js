@@ -1,9 +1,20 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 import PropType from 'prop-types';
 import { Consumer } from '../../../context';
 import axios from 'axios';
 
+const Card = styled.div`
+  display: flex;
+  background-color: #fff;
+  padding: 8px;
+  margin-bottom: 16px;
+  box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);
+  && ul {
+    flex: 9;
+  }
+`
 class Contact extends Component {
   onDeleteClick = async (id, dispatch) => {
     if(window.confirm('Are you sure?')) {
@@ -24,7 +35,7 @@ class Contact extends Component {
         {value => {
           const { dispatch } = value;
           return (
-            <div className="card">
+            <Card className="card">
               <ul>
                 <li><h4>{name}</h4></li>
                 <li>Phone: {phone}</li>
@@ -41,7 +52,7 @@ class Contact extends Component {
                 style={{ cursor: 'pointer', float: 'right', textAlign: 'right', color: '#ff3c38'}}
                 onClick={this.onDeleteClick.bind(this, id, dispatch)}
               />
-            </div>
+            </Card>
           )
         }}
       </Consumer>
