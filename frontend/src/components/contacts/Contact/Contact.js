@@ -21,7 +21,7 @@ class Contact extends Component {
       console.log(2)
       await axios
         .delete
-        (`http://localhost:3000/contacts/${id}`);
+        (`/contacts/${id}`);
       dispatch({type: 'DELETE_CONTACT', payload: id})
     } else {
       console.log(3)

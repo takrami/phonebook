@@ -15,7 +15,7 @@ class EditContact extends Component {
   async componentDidMount() {
     const { id } = this.props.match.params;
     const res = await axios.get
-    (`http://localhost:3000/contacts/${id}`);
+    (`/contacts/${id}`);
 
     const contact = res.data;
 
@@ -63,7 +63,7 @@ class EditContact extends Component {
     const { id } = this.props.match.params;
 
     const res = await axios
-      .put(`http://localhost:3000/contacts/${id}`, updContact);
+      .put(`/contacts/${id}`, updContact);
 
     dispatch({ type: 'UPDATE_CONTACT', payload: res.data }) 
 

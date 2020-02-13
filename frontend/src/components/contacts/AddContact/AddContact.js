@@ -50,7 +50,7 @@ class AddContact extends Component {
 
     const res = await axios
       .post
-      ('http://localhost:3000/contacts', newContact)
+      ('/contacts', newContact)
 
     dispatch({ type: 'ADD_CONTACT', payload: res.data })
 

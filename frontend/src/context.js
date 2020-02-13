@@ -42,7 +42,7 @@ export class Provider extends Component {
   async componentDidMount() {
     const res = await axios
       .get
-      ('http://localhost:3000/contacts');
+      ('/contacts');
     
     this.setState({contacts: res.data});
   }
